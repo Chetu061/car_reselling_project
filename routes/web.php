@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\DataTableAjaxController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,3 +44,9 @@ Route::get('car/delete/{id}',[CarController::class,'delete'])->name('car.delete'
 Route::get('car/view/{id}',[CarController::class,'view'])->name('car.view');
 Route::get('car/edit/{id}',[CarController::class,'edit'])->name('car.edit');
 Route::post('car/update/{id}',[CarController::class,'update'])->name('car.update');
+
+
+Route::get('ajax-crud-datatable', [DataTableAjaxController::class, 'index'])->name('ajax-crud-datatable');
+Route::post('store-company', [DataTableAjaxController::class, 'store']);
+Route::post('edit-company', [DataTableAjaxController::class, 'edit']);
+Route::post('delete-company', [DataTableAjaxController::class, 'destroy']);

@@ -16,7 +16,7 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#!">Car Reselling Website</a>
+                <a class="navbar-brand" href="#!">Car Reselling Blogging Application</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
              
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
@@ -36,7 +36,7 @@
         <header class="py-5 bg-light border-bottom mb-4">
             <div class="container">
                 <div class="text-center my-5">
-                    <h1 class="fw-bolder">Welcome to Cars View Page!</h1>
+                    <h1 class="fw-bolder">Welcome to Cars Blog Page!</h1>
                     
                 </div>
             </div>

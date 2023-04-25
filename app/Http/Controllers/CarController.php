@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Car;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
 class CarController extends Controller
@@ -39,7 +40,7 @@ class CarController extends Controller
 
         $car->save();
        
-        return redirect()->route('car.index')->with('message','Added Successfully ! ');
+return redirect()->route('car.index')->with('message','Added Successfully ! ');
 
     }
     public function index()
@@ -61,9 +62,7 @@ class CarController extends Controller
          $car->car_type=$request->car_type;
          $car->price=$request->price;
          $car->top_speed=$request->top_speed;
- 
-       
-         if($files=$request->file('images')){
+ if($files=$request->file('images')){
             foreach($files as $file){
                 // $name=$file->getClientOriginalExtension();
                 // $filename = time().'.'.$name;
@@ -74,14 +73,7 @@ class CarController extends Controller
             $images[]=$name;
             }
         }
-        $car->images =   implode("|",$images);
-
-
-      
-       
- 
-      
-         $car->update();
+        $car->images =   implode("|",$images);$car->update();
          return redirect()->route('car.index')->with('message','Update Successfully ! ');
     }
  
@@ -99,5 +91,7 @@ class CarController extends Controller
        return redirect()->route('car.index')->with('message','Delete Successfully ! ');
 
    }
+
+
 
 }
